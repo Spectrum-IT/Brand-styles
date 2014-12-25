@@ -8,14 +8,15 @@ $font_body = "Open Sans", sans-serif
 $font_header = "Open Sans", sans-serif
 
 $body_weight = 400
+$body_size = 16px
+
+$header_margin = 8px
 $h1_weight = 300
 $h2_weight = 300
 $h3_weight = 600
 $h4_weight = 600
 $h5_weight = 600
 $h6_weight = 600
-
-$body_size = 16px
 $h1_size = 36px
 $h2_size = 32px
 $h3_size = 28px
@@ -33,6 +34,24 @@ $body_color = $navy
 $header_color = $navy
 $subheader_color = $red
 
+.navy
+  color $navy
+.red
+  color $red
+.gray
+  color $gray
+.white
+  color $white
+
+.bgnavy
+  background-color $navy
+.bgred
+  background-color $red
+.bggray
+  background-color $gray
+.bgwhite
+  background-color $white
+
 ////
 // Basic styles
 ////
@@ -47,11 +66,8 @@ html, body
   font-size $body_size
 
 p
-  line-height 1.4
-
-  @media all and (max-width: 768px)
-    font-size $body_size - 1
-    line-height 1.6
+  line-height 1.5
+  font-size $body_size
 
 img
   max-width 100%
@@ -63,44 +79,18 @@ a:hover, button:hover
   cursor pointer
 
 ////
-// Columns
-////
-.w20, .w25, .w33, .w40, .w50, .w60, .w66, w75, .w80, .w100
-  display inline-block
-  vertical-align top
-
-.w20
-  width 20%
-.w25
-  width 25%
-.w33
-  width 33%
-.w40
-  width 40%
-.w50
-  width 50%
-.w60
-  width 60%
-.w66
-  width 66%
-.w75
-  width 75%
-.w80
-  width 80%
-.w100
-  width 100%
-
-////
 // Headers
 ////
 h1
   font-family $font_header
   font-weight $h1_weight
   font-size $h1_size
+  margin-bottom $header_margin
   color $header_color
 
 h2, h3, h4, h5, h6
   font-family $font_header
+  margin-bottom $header_margin
   color $subheader_color
 
 h2
